@@ -43,7 +43,7 @@ const MyMapComponent = withScriptjs(
 
     return (
       <GoogleMap
-        defaultZoom={18}
+        defaultZoom={16}
         defaultCenter={{ lat: array[0].latitude, lng: array[0].longitude }}
       >
         {handleShowMark}
@@ -56,7 +56,6 @@ export function App() {
   const { getRotas, data, loading } = useRunning();
 
   const [selected, setSelected] = React.useState(-1);
-  const [clear, setClear] = React.useState(false);
 
   const showOptions = React.useMemo(() => {
     if (!data) {
@@ -81,7 +80,6 @@ export function App() {
         <button disabled={loading} onClick={() => getRotas()}>
           visualizar dados
         </button>
-        <button onClick={() => setClear(true)}>limpar mapa</button>
         {data !== null && (
           <React.Fragment>
             <p>Selecione uma corrida</p>
@@ -91,7 +89,6 @@ export function App() {
             </select>
             {selected !== -1 && (
               <MyMapComponent
-                clear={clear}
                 array={data[selected].values}
                 isMarkerShown={true}
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMU0wTfdss_x9etOFViRbdZb7OrmWtZrw&v=3.exp&libraries=geometry,drawing,places"
