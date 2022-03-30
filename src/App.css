@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main {
   min-height: 100vh;
+  padding: 2rem;
+  background-color: #f4f7fa;
+  display: grid;
+  place-items: center;
+}
+
+.lg-wp {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.lg-wp button {
+  padding: .75em 1em;
+  background-color: #7890f0;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lg-wp button:hover , .lg-wp button:focus {
+  background-color: #346df0;
+}
+
+.lg-wp button:disabled {
+  background-color: #454590;
 }
