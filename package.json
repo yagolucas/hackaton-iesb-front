@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.26.1",
-    "google-maps-react": "^2.0.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-google-maps": "^9.4.5",
@@ -34,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
   }
 }

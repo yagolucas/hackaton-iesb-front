@@ -1,3 +1,4 @@
+import "dotenv/config";
 import * as React from "react";
 import "./App.css";
 import Logo from "./assets/iesb.png";
@@ -91,7 +92,7 @@ export function App() {
               <MyMapComponent
                 array={data[selected].values}
                 isMarkerShown={true}
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMU0wTfdss_x9etOFViRbdZb7OrmWtZrw&v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={
                   <div style={{ height: `400px`, width: "90vw" }} />
@@ -105,3 +106,4 @@ export function App() {
     </div>
   );
 }
+
